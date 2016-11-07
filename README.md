@@ -1,29 +1,18 @@
-# koa2-boilerplate
+# Koa 2 demo
 
-A minimal boilerplate of [koa v2](https://github.com/koajs/koa/issues/533).
-
-[![NPM Version][npm-image]][npm-url]
-[![NPM Downloads][downloads-image]][downloads-url]
+  Simple demo for Koa with Koa router
 
 ## Installation
 
-Both ways you can start:
-
-    fork this repo & git clone the repo
-    npm install koa2-boilerplate
-
-
-## Command
-
-#### Setup
+## Setup
 
     npm install
 
-#### Develop
+## Develop
 
     npm start
 
-#### Test
+## Test
 
     npm test
 
@@ -52,10 +41,3 @@ Both ways you can start:
 ## License
 
 MIT &copy; [GeekPlux](https://github.com/geekplux)
-
-
-
-[npm-image]: https://img.shields.io/npm/v/koa2-boilerplate.svg
-[npm-url]: https://npmjs.org/package/koa2-boilerplate
-[downloads-image]: https://img.shields.io/npm/dm/koa2-boilerplate.svg
-[downloads-url]: https://npmjs.org/package/koa2-boilerplate
