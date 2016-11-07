@@ -1,12 +1,22 @@
-import Koa from 'koa'
-const app = new Koa()
+import Koa from 'koa';
+import Router from 'koa-router';
+import logger from 'koa-logger';
+import json from 'koa-json';
+const app = new Koa();
+const router = new Router();
 
-// response
-app.use(async (ctx) => {
-  ctx.body = 'Hello World'
-})
+// Logger
+app.use(logger());
+app.use(json());
 
-app.listen(3000, () => console.log('server started 3000'))
+router.get('/', function *(next) {
+  this.body = {demo: 'Demo'};
+});
 
-export default app
+app.use(router.routes())
+  .use(router.allowedMethods());
 
+
+app.listen(8000, () => console.log('server started 8000'));
+
+export default app;
