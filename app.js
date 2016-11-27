@@ -9,9 +9,18 @@ const router = new Router();
 app.use(logger());
 app.use(json());
 
-router.get('/', function *(next) {
-  this.body = {demo: 'Demo'};
+router.get('/api/v1/get', function *(next) {
+  const todos = {
+    todos: [
+      {id: 0, title: "write this", done: true},
+      {id: 1, title: "read this", done: false},
+      {id: 2, title: "do something", done: false}
+    ]
+  }
+  this.body = todos;
 });
+
+
 
 app.use(router.routes())
   .use(router.allowedMethods());
